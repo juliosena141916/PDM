@@ -28,11 +28,11 @@ class _InterruptorAppState extends State<InterruptorApp> {
 
   IconData getHumor() {
     if (estaAceso == 0) {
-      return Icons.sentiment_satisfied;
+      return Icons.sentiment_very_satisfied;
     } else if (estaAceso == 1) {
       return Icons.sentiment_neutral;
     } else {
-      return Icons.sentiment_dissatisfied;
+      return Icons.sentiment_very_dissatisfied;
     }
   }
 
@@ -54,7 +54,7 @@ class _InterruptorAppState extends State<InterruptorApp> {
 
       appBar: AppBar( 
         backgroundColor: getColor(),
-        title: Text('Interruptor',
+        title: Text('Emoções',
          style: TextStyle(color: Colors.black,
           ),
         ),
@@ -77,7 +77,7 @@ class _InterruptorAppState extends State<InterruptorApp> {
               ),
 
               child: Text(
-                'Interruptor',
+                'Mudar Emoções',
                 style: TextStyle(
                   color: Colors.white,
                 ),
