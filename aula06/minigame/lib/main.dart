@@ -43,8 +43,8 @@ class _JogoAppState extends State<JogoApp> {
       // Lógica do jogo
       if (escolhaUsuario == escolhaComputador) {
         resultado = "Empate";
-      } else if ((escolhaUsuario == "pedra" &&
-              escolhaComputador == "tesoura") ||
+      } else if (
+          (escolhaUsuario == "pedra" && escolhaComputador == "tesoura") ||
           (escolhaUsuario == "papel" && escolhaComputador == "pedra") ||
           (escolhaUsuario == "tesoura" && escolhaComputador == "papel")) {
         pontosJogador++;
