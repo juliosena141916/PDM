@@ -7,7 +7,7 @@ void main() {
   ));
 }
 
-// 🟡 Tela 1 – Lista de Contatos
+//Tela 1 – Lista de Contatos
 
 class TelaInicial extends StatelessWidget {
 
@@ -51,7 +51,7 @@ class TelaInicial extends StatelessWidget {
   }
 }
 
-// 🟡 Tela 2 – Detalhes
+//Tela 2 – Detalhes
 
 class DetalheContato extends StatelessWidget {
 
