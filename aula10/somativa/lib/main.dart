@@ -48,7 +48,7 @@ class _AppListaState extends State<AppLista>{
   Future<void> carregarDados() async {
     final db = await criarBanco();
 
-    final listadados = await db.query("dados");
+    final listadados = await db.query("dados", orderBy: "titulo ASC");
 
     setState(() {
       dados = listadados;
@@ -99,7 +99,7 @@ void mostrarDialogoEdicao(Map<String, dynamic> item) {
               TextField(controller: edtDescricao, decoration: InputDecoration(labelText: "Descrição")),
             ],
           ),
-          
+
           actions: [
             TextButton(
               onPressed: () => Navigator.pop(context),
@@ -172,6 +172,7 @@ void mostrarDialogoEdicao(Map<String, dynamic> item) {
               return ListTile(
                 title: Text(dados[index]["titulo"]),
                 subtitle: Text(dados[index]["descricao"]),
+               
                 onTap: () {
                     mostrarDialogoEdicao(dados[index]);
                   },
@@ -184,7 +185,7 @@ void mostrarDialogoEdicao(Map<String, dynamic> item) {
               );
             },
           ),
-         ),      
+         ),
 
         ],
       ),
